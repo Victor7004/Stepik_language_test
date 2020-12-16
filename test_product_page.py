@@ -13,3 +13,4 @@ def test_guest_can_add_product_to_basket(browser):
     time.sleep(3) 
     # выполнить проверку добавилась ли книга 
     # выполнить проверку правильности цены
+    page.should_be_by_busket() 
