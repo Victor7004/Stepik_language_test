@@ -47,6 +47,7 @@ class TestUserAddToBasketFromProductPage(BasePage):
         page.open()
         page.user_can_add_product_to_basket()
 
+
     def test_user_cant_see_success_message(browser)
         link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=offer1"
         page = ByPage(browser, link)
