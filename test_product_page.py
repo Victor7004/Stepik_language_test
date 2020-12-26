@@ -53,7 +53,5 @@ class TestUserAddToBasketFromProductPage(BasePage):
         page.open()
         page.user_cant_see_success_message() 
 
-    def user_can_add_product_to_basket(self):
-        self.compare_name()
-        self.compare_price()
+   
  
