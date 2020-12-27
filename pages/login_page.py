@@ -18,3 +18,14 @@ class LoginPage(BasePage):
     def should_be_register_form(self):
         # реализуйте проверку, что есть форма регистрации на странице
         assert True
+
+    
+    def should_be_register_form(self):
+        # реализуйте проверку, что есть форма регистрации на странице
+        assert self.is_element_present(*MainPageLocators. REGISTER_FORM), "Register form is not presented "
+        assert True
+    def register_new_user(self, email, password):
+        # реализуйте метод регистрации нового пользователя
+        wait = Webdriver(self.driver, 5)
+        wait.until(EC.presence_of_element_located(*LoginPageLocators.REGISTER_FORM))
+        self.driver.find_element((*LoginPageLocators.LOGIN_FORM).send_keys(email))
