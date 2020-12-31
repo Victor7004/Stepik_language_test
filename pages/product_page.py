@@ -31,3 +31,7 @@ class ByPage(BasePage):
 
     def element_should_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Element doesn't disappear"
+
+    def user_can_add_product_to_basket(self):
+        self.compare_name()
+        self.compare_price() 
