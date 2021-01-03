@@ -35,3 +35,16 @@ class ByPage(BasePage):
     def user_can_add_product_to_basket(self):
         self.compare_name()
         self.compare_price() 
+
+    def go_to_basket_page(self):
+        button = self.browser.find_element(*BasketPageLocators.BUTTON_ITEM)
+        button.click()
+
+    def should_be_in_element_present(self):
+        #assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        #assert 'empty' in self.browser.find_element(By.XPATH, "//p[contains(text(), 'empty')]"), " Bas
+        #assert 'empty' in self.browser.find_element_by_xpyth( "//p[contains(text(), 'empty')]"), " Bas
+        assert 'empty' in self.browser.find_element(By.CSS_SELECTOR, 'p').text
+
+    def is_not_basket_empty(self):
+         assert self.is_not_element_present(*BasketPageLocators.BASKET_ITEM), "Basket is not empty"
