@@ -2,6 +2,7 @@ from .base_page import BasePage
 from selenium.webdriver.common.by import By
 from .locators import ByPageLocators
 from .login_page import LoginPage
+from pages.locators import BasketPageLocators
 import pytest
 
 class ByPage(BasePage):
